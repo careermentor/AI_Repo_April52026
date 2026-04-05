@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineer Mastery | Transform Your Career in 16 Weeks</title>
+    <meta name="description" content="Join 500+ professionals who landed AI roles. Learn GenAI, RAG, and Agentic AI. 88% cheaper than universities. Lifetime mentorship included.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color System - Bold & Trustworthy */
+            --primary: #0F172A;
+            --accent: #F97316;
+            --success: #10B981;
+            --warning: #EF4444;
+            --bg: #FFFFFF;
+            --bg-alt: #F8FAFC;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            
+            /* Typography */
+            --font-display: 'Fraunces', serif;
+            --font-body: 'DM Sans', sans-serif;
+            
+            /* Spacing */
+            --section-padding: 120px;
+            --container-max: 1200px;
+            
+            /* Effects */
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 16px 48px rgba(15, 23, 42, 0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .section {
+            padding: var(--section-padding) 0;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+        
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 80px 0 120px;
+            background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-50px, 50px) rotate(180deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 32px;
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        .hero-badge .badge-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--primary);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero h1 .highlight {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(249, 115, 22, 0.2);
+            z-index: -1;
+            transform: skewX(-12deg);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-subtitle {
+            font-size: 22px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        .btn {
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        
+        /* Social Proof Bar */
+        .social-proof {
+            background: var(--primary);
+            color: white;
+            padding: 24px 0;
+            text-align: center;
+        }
+        
+        .social-proof-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .proof-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(249, 115, 22, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .proof-text {
+            text-align: left;
+        }
+        
+        .proof-text strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .proof-text span {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: var(--bg);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-top: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--warning), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        
+        .problem-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+        
+        .problem-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(249, 115, 22, 0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+        
+        .problem-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .problem-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        
+        /* Big Promise Section */
+        .promise {
+            background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .promise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.5), transparent);
+        }
+        
+        .promise-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .promise h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        
+        .promise h2 .accent-text {
+            color: var(--accent);
+        }
+        
+        .promise p {
+            font-size: 22px;
+            opacity: 0.9;
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+        
+        .promise-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+        
+        .promise-feature {
+            text-align: center;
+        }
+        
+        .promise-feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(249, 115, 22, 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 20px;
+            border: 2px solid rgba(249, 115, 22, 0.3);
+        }
+        
+        .promise-feature h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .promise-feature p {
+            font-size: 16px;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        /* Curriculum Section */
+        .curriculum {
+            background: var(--bg-alt);
+        }
+        
+        .curriculum-grid {
+            display: grid;
+            gap: 24px;
+        }
+        
+        .curriculum-module {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            transition: var(--transition);
+        }
+        
+        .curriculum-module:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .module-header {
+            background: linear-gradient(135deg, var(--primary), #1E293B);
+            color: white;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .module-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        
+        .module-info h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .module-info p {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+        
+        .module-content {
+            padding: 32px;
+        }
+        
+        .module-topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg-alt);
+            border-radius: 8px;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+        
+        .topic-item:hover {
+            background: rgba(249, 115, 22, 0.08);
+            transform: translateX(4px);
+        }
+        
+        .topic-item::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 120px;
+            font-family: var(--font-display);
+            color: rgba(249, 115, 22, 0.08);
+            line-height: 1;
+            font-weight: 900;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--warning));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .testimonial-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        .testimonial-content {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .testimonial-rating {
+            display: flex;
+            gap: 4px;
+            margin-top: 16px;
+        }
+        
+        .star {
+            color: #FBBF24;
+            font-size: 18px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: var(--bg-alt);
+            text-align: center;
+        }
+        
+        .pricing-comparison {
+            background: white;
+            border-radius: 24px;
+            padding: 64px;
+            max-width: 900px;
+            margin: 0 auto 64px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--border);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+        }
+        
+        .comparison-item {
+            text-align: center;
+        }
+        
+        .comparison-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .comparison-price {
+            font-family: var(--font-display);
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .comparison-price.saving {
+            color: var(--success);
+        }
+        
+        .comparison-subtext {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        
+        .savings-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 32px;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+        }
+        
+        .pricing-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 64px;
+        }
+        
+        .pricing-feature {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .pricing-feature:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pricing-feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-feature h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        
+        .pricing-feature p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+        
+        /* Urgency Section */
+        .urgency {
+            background: linear-gradient(135deg, var(--warning), var(--accent));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .urgency::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 50%;
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+        
+        .urgency-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .urgency h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+        
+        .urgency p {
+            font-size: 22px;
+            margin-bottom: 16px;
+            opacity: 0.95;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 48px 0;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 24px 32px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .countdown-number {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 900;
+            display: block;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 14px;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            border-color: var(--accent);
+        }
+        
+        .faq-question {
+            padding: 24px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 28px;
+            font-weight: 300;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding: 0 32px 24px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+        
+        .final-cta p {
+            font-size: 22px;
+            opacity: 0.9;
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-guarantee {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(16, 185, 129, 0.2);
+            padding: 16px 28px;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid rgba(16, 185, 129, 0.4);
+        }
+        
+        .guarantee-icon {
+            font-size: 24px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--bg-alt);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 32px;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 15px;
+            max-width: 500px;
+            margin: 0 auto 24px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            border: 2px solid var(--border);
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 80px;
+            }
+            
+            .hero {
+                padding: 60px 0 80px;
+            }
+            
+            .hero-cta-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .pricing-comparison {
+                padding: 32px 24px;
+            }
+            
+            .countdown {
+                gap: 16px;
+            }
+            
+            .countdown-item {
+                padding: 16px 20px;
+            }
+            
+            .countdown-number {
+                font-size: 36px;
+            }
+            
+            .module-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 16px;
+            }
+            
+            .nav-logo {
+                font-size: 20px;
+            }
+            
+            .nav-cta {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .module-topics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AI Mastery</a>
+            <a href="#enroll" class="nav-cta">Enroll Now →</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="badge-icon">✓</div>
+                    500+ Students Trained in AI Roles
+                </div>
+                
+                <h1>
+                    Master <span class="highlight">AI Engineering</span><br>
+                    In Just 16 Weeks
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Join professionals who landed GenAI, Machine Learning, and AI Engineering roles. 
+                    No fluff. Just skills that get you hired.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="#enroll" class="btn btn-primary" id="heroEnrollBtn">
+                        Start Your Journey →
+                    </a>
+                    <a href="#curriculum" class="btn btn-secondary">
+                        View Curriculum
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Students Trained</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">16</span>
+                        <span class="stat-label">Week Program</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Cost Savings</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Student Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <div class="proof-item">
+                    <div class="proof-icon">🏆</div>
+                    <div class="proof-text">
+                        <strong>Top Rated</strong>
+                        <span>4.9/5 on Trustpilot</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-icon">💼</div>
+                    <div class="proof-text">
+                        <strong>Career Support</strong>
+                        <span>Lifetime Mentorship</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-icon">🎓</div>
+                    <div class="proof-text">
+                        <strong>Industry Expert</strong>
+                        <span>10+ Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Problem</div>
+                <h2 class="section-title">
+                    AI Is Replacing Jobs.<br>
+                    Will Yours Be Next?
+                </h2>
+                <p class="section-subtitle">
+                    While you're waiting, AI is advancing. Don't get left behind.
+                </p>
+            </div>
+            
+            <div class="problem-grid fade-in">
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Job Uncertainty</h3>
+                    <p>
+                        Companies are automating roles with AI. Without AI skills, your position 
+                        becomes increasingly vulnerable to replacement.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>Falling Behind</h3>
+                    <p>
+                        Your peers are learning AI. Every day you delay puts you further behind 
+                        in the most important career shift of this decade.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Expensive Education</h3>
+                    <p>
+                        University AI programs cost $2,000+. Most are outdated theory without 
+                        real-world application or job placement support.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Time Running Out</h3>
+                    <p>
+                        AI adoption is accelerating. What's optional today will be mandatory 
+                        tomorrow. Act now or regret later.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">🤔</div>
+                    <h3>Where to Start?</h3>
+                    <p>
+                        Overwhelming information online. Courses that teach outdated tech. 
+                        No clear path from learning to landing an AI job.
+                    </p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">🚫</div>
+                    <h3>No Guidance</h3>
+                    <p>
+                        Learning alone is hard. No mentor to ask questions. No one to review 
+                        your work. No support when you're stuck.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Promise -->
+    <section class="promise section">
+        <div class="container">
+            <div class="promise-content">
+                <h2>
+                    We Turn Complete Beginners Into<br>
+                    <span class="accent-text">Job-Ready AI Engineers</span>
+                </h2>
+                <p>
+                    In 16 weeks, you'll master GenAI, RAG, Agentic AI, and land your first AI role. 
+                    Or keep learning with us—free—until you do.
+                </p>
+                
+                <div class="promise-features">
+                    <div class="promise-feature">
+                        <div class="promise-feature-icon">🎯</div>
+                        <h4>Practical Skills</h4>
+                        <p>Build real AI projects, not theory</p>
+                    </div>
+                    <div class="promise-feature">
+                        <div class="promise-feature-icon">💼</div>
+                        <h4>Job Placement</h4>
+                        <p>Support until you land your role</p>
+                    </div>
+                    <div class="promise-feature">
+                        <div class="promise-feature-icon">👨‍🏫</div>
+                        <h4>Expert Mentor</h4>
+                        <p>Learn from industry practitioners</p>
+                    </div>
+                    <div class="promise-feature">
+                        <div class="promise-feature-icon">⚡</div>
+                        <h4>Fast Track</h4>
+                        <p>16 weeks to career transformation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section class="curriculum section" id="curriculum">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What You'll Learn</div>
+                <h2 class="section-title">
+                    Complete AI Engineering Curriculum
+                </h2>
+                <p class="section-subtitle">
+                    From fundamentals to advanced applications. Everything you need to succeed.
+                </p>
+            </div>
+            
+            <div class="curriculum-grid fade-in">
+                <div class="curriculum-module">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-info">
+                            <h3>Foundations</h3>
+                            <p>Weeks 1-4 • Build Your Base</p>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-topics">
+                            <div class="topic-item">Python Programming</div>
+                            <div class="topic-item">Data Structures</div>
+                            <div class="topic-item">APIs & REST</div>
+                            <div class="topic-item">Git & Version Control</div>
+                            <div class="topic-item">Linux Commands</div>
+                            <div class="topic-item">Cloud Basics (AWS)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="curriculum-module">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-info">
+                            <h3>Generative AI</h3>
+                            <p>Weeks 5-8 • Master GenAI</p>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-topics">
+                            <div class="topic-item">LLM Fundamentals</div>
+                            <div class="topic-item">Prompt Engineering</div>
+                            <div class="topic-item">OpenAI API</div>
+                            <div class="topic-item">Claude & Gemini</div>
+                            <div class="topic-item">Token Optimization</div>
+                            <div class="topic-item">Cost Management</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="curriculum-module">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-info">
+                            <h3>RAG & Vector Databases</h3>
+                            <p>Weeks 9-12 • Advanced Techniques</p>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-topics">
+                            <div class="topic-item">RAG Architecture</div>
+                            <div class="topic-item">Vector Embeddings</div>
+                            <div class="topic-item">Pinecone & Weaviate</div>
+                            <div class="topic-item">Semantic Search</div>
+                            <div class="topic-item">Document Processing</div>
+                            <div class="topic-item">Chunking Strategies</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="curriculum-module">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-info">
+                            <h3>Agentic AI</h3>
+                            <p>Weeks 13-16 • Build AI Agents</p>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-topics">
+                            <div class="topic-item">Agent Frameworks</div>
+                            <div class="topic-item">LangChain & LlamaIndex</div>
+                            <div class="topic-item">AutoGPT Concepts</div>
+                            <div class="topic-item">Multi-Agent Systems</div>
+                            <div class="topic-item">Tool Integration</div>
+                            <div class="topic-item">Production Deployment</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="curriculum-module">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-info">
+                            <h3>Job Preparation</h3>
+                            <p>Weeks 17-20 • Land Your Role</p>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <div class="module-topics">
+                            <div class="topic-item">Portfolio Projects</div>
+                            <div class="topic-item">Resume Optimization</div>
+                            <div class="topic-item">LinkedIn Strategy</div>
+                            <div class="topic-item">Mock Interviews</div>
+                            <div class="topic-item">Blue Ocean Job Strategy</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Student Success</div>
+                <h2 class="section-title">
+                    Real People. Real Results.
+                </h2>
+                <p class="section-subtitle">
+                    See what our students achieved after completing the program
+                </p>
+            </div>
+            
+            <div class="testimonials-grid fade-in">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">RS</div>
+                        <div class="testimonial-info">
+                            <h4>Rajesh Sharma</h4>
+                            <p>AI Engineer at Tech Startup</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        "I was a Java developer with no AI experience. After this program, I landed an AI Engineer role with 40% salary hike. The hands-on projects and mentorship made all the difference."
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">PK</div>
+                        <div class="testimonial-info">
+                            <h4>Priya Kapoor</h4>
+                            <p>ML Engineer at Fortune 500</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        "The RAG and Agentic AI modules were game-changers. I built a production-ready chatbot that impressed in my interviews. Got 3 offers within a month of completing the course!"
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AM</div>
+                        <div class="testimonial-info">
+                            <h4>Arjun Mehta</h4>
+                            <p>Senior Data Scientist</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        "Best investment I made in my career. The curriculum is spot-on with industry needs. The job preparation module helped me crack interviews at top companies. Worth every penny!"
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SK</div>
+                        <div class="testimonial-info">
+                            <h4>Sneha Kumar</h4>
+                            <p>AI Product Manager</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        "From zero AI knowledge to building complex AI agents in 16 weeks. The instructor's real-world experience shows in every lesson. Highly recommended for career switchers!"
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">VG</div>
+                        <div class="testimonial-info">
+                            <h4>Vikram Gupta</h4>
+                            <p>GenAI Specialist</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        "The lifetime mentorship is invaluable. Even after getting my job, I still reach out for guidance. This isn't just a course—it's a career transformation program."
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">NK</div>
+                        <div class="testimonial-info">
+                            <h4>Neha Khanna</h4>
+                            <p>AI Consultant</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        "Switched from marketing to AI engineering. Seemed impossible but this program made it happen. The step-by-step approach and constant support kept me motivated throughout."
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Investment</div>
+                <h2 class="section-title">
+                    85% Cheaper Than Universities.<br>
+                    10x More Practical.
+                </h2>
+            </div>
+            
+            <div class="pricing-comparison fade-in">
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-label">University AI Course</div>
+                        <div class="comparison-price">$2,000</div>
+                        <div class="comparison-subtext">Theory-heavy, outdated content</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comparison-label">AI Mastery Program</div>
+                        <div class="comparison-price saving">$299</div>
+                        <div class="comparison-subtext">Practical, job-ready skills</div>
+                    </div>
+                </div>
+                <div class="savings-badge">
+                    You Save $2,201 💰
+                </div>
+            </div>
+            
+            <div class="pricing-features">
+                <div class="pricing-feature">
+                    <div class="pricing-feature-icon">📚</div>
+                    <h4>16-Week Program</h4>
+                    <p>Complete curriculum from basics to advanced AI</p>
+                </div>
+                <div class="pricing-feature">
+                    <div class="pricing-feature-icon">💼</div>
+                    <h4>Job Placement</h4>
+                    <p>Resume, portfolio, interview prep & support</p>
+                </div>
+                <div class="pricing-feature">
+                    <div class="pricing-feature-icon">🤝</div>
+                    <h4>Lifetime Access</h4>
+                    <p>Mentorship until you land your AI role</p>
+                </div>
+                <div class="pricing-feature">
+                    <div class="pricing-feature-icon">🎓</div>
+                    <h4>Certificate</h4>
+                    <p>Completion certificate to boost your profile</p>
+                </div>
+                <div class="pricing-feature">
+                    <div class="pricing-feature-icon">🛠️</div>
+                    <h4>Real Projects</h4>
+                    <p>Build portfolio-worthy AI applications</p>
+                </div>
+                <div class="pricing-feature">
+                    <div class="pricing-feature-icon">👨‍💼</div>
+                    <h4>Expert Mentor</h4>
+                    <p>Learn from 10+ years industry experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency section">
+        <div class="container">
+            <div class="urgency-content">
+                <h2>Next Batch Starts In:</h2>
+                
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">12</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">08</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">45</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                </div>
+                
+                <p><strong>Limited to 10 students per batch</strong></p>
+                <p>3 spots already filled. Only 7 remaining.</p>
+                <p style="margin-top: 32px;">Don't let procrastination cost you your future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Questions?</div>
+                <h2 class="section-title">
+                    Everything You Need to Know
+                </h2>
+            </div>
+            
+            <div class="faq-list fade-in">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need prior programming experience?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No! We start from the basics. If you can use a computer, you can learn AI engineering. We've helped complete beginners land AI roles. The first 4 weeks cover all the programming fundamentals you need.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How is this different from free YouTube courses?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            YouTube gives you scattered information. We give you a structured path, hands-on projects, personalized feedback, mock interviews, resume reviews, and lifetime mentorship. Plus, accountability and a community of learners. That's the difference between watching videos and transforming your career.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if I don't get a job after the program?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You get lifetime mentorship. We support you until you succeed. We'll review your applications, refine your resume, conduct mock interviews, and guide you until you land a role. Your success is our success.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much time do I need to commit weekly?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Plan for 10-15 hours per week. 2-3 hours for live sessions, rest for projects and practice. It's intensive but achievable alongside a full-time job. Most of our students are working professionals.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are the classes live or recorded?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Both! We have live sessions for interaction and Q&A, plus all recordings are available so you never miss anything. You get lifetime access to all materials.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What kind of jobs can I get after this?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            AI Engineer, GenAI Developer, ML Engineer, AI Consultant, Data Scientist, AI Product Manager, RAG Engineer, LLM Engineer. Our students have landed roles across startups, product companies, and Fortune 500 firms.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer EMI or payment plans?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! We offer flexible payment options. Contact us via WhatsApp to discuss payment plans that work for you. We don't want money to be a barrier to your success.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta section" id="enroll">
+        <div class="container">
+            <h2>Ready to Future-Proof Your Career?</h2>
+            <p>
+                Join 500+ students who took action and transformed their careers. 
+                The question isn't if AI will impact your job—it's whether you'll be prepared.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" id="finalEnrollBtn" style="font-size: 20px; padding: 20px 48px;">
+                    🚀 Enroll Now - $299
+                </a>
+                <a href="#" class="btn btn-secondary" id="whatsappBtn" style="font-size: 18px; padding: 18px 40px;">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
+            
+            <div class="cta-guarantee">
+                <div class="guarantee-badge">
+                    <span class="guarantee-icon">✓</span>
+                    Lifetime Mentorship Included
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AI Mastery</div>
+                <p class="footer-text">
+                    Transforming professionals into AI engineers. One student at a time.
+                </p>
+            </div>
+            
+            
+            <div class="footer-bottom">
+                © 2026 AI Mastery. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // IMPORTANT: Update these with your actual links
+        // ============================================
+        const GOOGLE_FORM_URL = 'https://forms.gle/YOUR_GOOGLE_FORM_ID';
+        const WHATSAPP_NUMBER = '919876543210'; // Format: countrycode + number (no + or spaces)
+        const CALENDLY_URL = 'https://calendly.com/your-username/clarity-call';
+        
+        // WhatsApp message
+        const whatsappMessage = encodeURIComponent(
+            "Hi! I'm interested in the AI Engineer Program. Please share more details about:\n\n" +
+            "✅ Batch timings\n" +
+            "✅ Curriculum breakdown\n" +
+            "✅ Payment options\n" +
+            "✅ Job support\n\n" +
+            "Thank you!"
+        );
+        
+        // Enroll buttons
+        document.getElementById('heroEnrollBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(GOOGLE_FORM_URL, '_blank');
+        });
+        
+        document.getElementById('finalEnrollBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(GOOGLE_FORM_URL, '_blank');
+        });
+        
+        // WhatsApp button
+        document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`, '_blank');
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = '0';
+                });
+                
+                // Open clicked FAQ if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Countdown Timer (static for demo - replace with actual dates)
+        function updateCountdown() {
+            // This is a static demo. Replace with actual date calculation
+            const days = Math.floor(Math.random() * 3) + 10;
+            const hours = Math.floor(Math.random() * 12) + 6;
+            const minutes = Math.floor(Math.random() * 60);
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        }
+        
+        // Update countdown every minute
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Engineer Program | Become Job‑Ready in 20 Weeks</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: #05070f;
+      color: #e6ebff;
+      line-height: 1.6;
+    }
+
+    .container { max-width: 1200px; margin: auto; padding: 24px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: radial-gradient(circle at top, #0b122b, #05070f 70%);
+      text-align: center;
+      padding: 120px 20px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #6cf, #9b8cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #b8c2ff;
+      max-width: 700px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      padding: 16px 32px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.25s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4df, #7b61ff);
+      color: #05070f;
+      box-shadow: 0 0 30px rgba(123,97,255,0.6);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px) scale(1.03); }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #6c7bff;
+      color: #cdd5ff;
+    }
+
+    .btn-secondary:hover { background: rgba(108,123,255,0.1); }
+
+    /* ---------- TRUST BAR ---------- */
+    .trust {
+      background: #0a0f24;
+      border-top: 1px solid #1a2145;
+      border-bottom: 1px solid #1a2145;
+      padding: 18px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #aab4ff;
+    }
+
+    /* ---------- SECTION ---------- */
+    section { padding: 80px 0; }
+
+    h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #7b61ff, #4df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sub { text-align: center; color: #9aa4ff; margin-bottom: 50px; }
+
+    /* ---------- CARDS ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #0c122b, #070b1a);
+      border: 1px solid #1b2350;
+      padding: 28px;
+      border-radius: 20px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(123,97,255,0.25);
+    }
+
+    .card h3 { margin-bottom: 10px; color: #dfe5ff; }
+    .card p { color: #9aa4ff; font-size: 0.95rem; }
+
+    /* ---------- TIMELINE ---------- */
+    .timeline { max-width: 800px; margin: auto; }
+
+    .step {
+      background: #0b1026;
+      border: 1px solid #1c2455;
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+
+    .step strong { color: #7b61ff; }
+
+    /* ---------- PRICING ---------- */
+    .pricing {
+      background: radial-gradient(circle at top, #0a0f24, #05070f);
+      text-align: center;
+    }
+
+    .price-card {
+      max-width: 420px;
+      margin: auto;
+      background: linear-gradient(180deg, #10163a, #0a0f24);
+      border: 1px solid #2a35a0;
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 0 40px rgba(123,97,255,0.3);
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 10px 0 20px;
+      background: linear-gradient(90deg, #4df, #7b61ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .guarantee { color: #7bffb2; margin-top: 12px; font-weight: 600; }
+
+    /* ---------- FOOTER CTA ---------- */
+    .final-cta {
+      text-align: center;
+      padding: 100px 20px;
+      background: radial-gradient(circle at center, #0b122b, #05070f);
+    }
+
+    .final-cta h2 { font-size: 2.4rem; margin-bottom: 16px; }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #1a2145;
+      color: #7c86d8;
+      font-size: 0.85rem;
+    }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Become an AI Engineer in 20 Weeks</h1>
+    <p>Live training • Real projects • Job‑ready portfolio • Lifetime mentorship — even if you're stuck in a low‑growth IT job today.</p>
+
+    <div class="cta-group">
+      <a href="#" class="btn btn-primary">🚀 Apply for Next Cohort</a>
+      <a href="#" class="btn btn-secondary">📞 Book Free Clarity Call</a>
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="trust">⭐ Rated 4.9/5 by 250+ students • Students working in AI, QA, Dev & Support roles</div>
+
+  <!-- PROBLEM -->
+  <section class="container">
+    <h2>The IT Career Reality in 2026</h2>
+    <p class="sub">AI is transforming every company. The only question is whether you're ready.</p>
+
+    <div class="grid">
+      <div class="card"><h3>Job insecurity rising</h3><p>Automation and AI tools are replacing repetitive IT roles faster than expected.</p></div>
+      <div class="card"><h3>Freshers struggling</h3><p>Without AI skills, landing interviews is becoming extremely difficult.</p></div>
+      <div class="card"><h3>Massive AI demand</h3><p>Companies urgently need engineers who can build real AI solutions.</p></div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="container">
+    <h2>Your Complete AI Transformation</h2>
+    <p class="sub">A step‑by‑step roadmap from beginner to job‑ready AI Engineer.</p>
+
+    <div class="grid">
+      <div class="card"><h3>Generative AI</h3><p>Build real AI apps using modern LLM tools and workflows.</p></div>
+      <div class="card"><h3>RAG Systems</h3><p>Create production‑ready AI systems connected to real data.</p></div>
+      <div class="card"><h3>Agentic AI</h3><p>Design autonomous AI agents that reason, plan, and act.</p></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <div class="container timeline">
+      <h2>Your 20‑Week Roadmap</h2>
+
+      <div class="step"><strong>Weeks 1‑16:</strong> Hands‑on AI development, Python, vector DBs, cloud, and real projects.</div>
+      <div class="step"><strong>Weeks 17‑20:</strong> Resume, LinkedIn, interview prep, and job‑search strategy.</div>
+      <div class="step"><strong>Lifetime:</strong> Mentorship and support until you succeed.</div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+    <div class="price-card">
+      <h2>Join the AI Engineer Program</h2>
+      <div class="price">$299</div>
+      <p>Full training • Projects • Job prep • Lifetime mentorship</p>
+      <p class="guarantee">✔ 30‑Day Money‑Back Guarantee</p>
+
+      <div style="margin-top:30px">
+        <a href="#" class="btn btn-primary">Secure Your Seat Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <h2>Your AI Career Starts Today</h2>
+    <p style="color:#9aa4ff; margin-bottom:30px">Next cohort seats are limited. Don’t wait until AI becomes a requirement.</p>
+    <a href="#" class="btn btn-primary">Apply Now</a>
+  </div>
+
+  <footer>© 2026 AI Engineer Program • All rights reserved</footer>
+
+</body>
+</html>
